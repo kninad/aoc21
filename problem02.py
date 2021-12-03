@@ -11,14 +11,15 @@ Algorithm --> Simple parsing and if-else statements
 
 INPUT_FILE_PATH = "input/prob2.input.txt"
 
+
 def parse_input(filepath):
     with open(filepath) as f:
         lines = f.readlines()
-    
+
     depth = 0
     horzp = 0
     aim = 0
-    
+
     for line in lines:
         command, value = line.split()
 
@@ -31,10 +32,11 @@ def parse_input(filepath):
             aim += int(value)
 
     print("Horizontal Position: ", horzp)
-    print("Depth: ", depth)  
+    print("Depth: ", depth)
     print("Aim: ", aim)
 
     return depth * horzp
+
 
 def main():
     print("Answer: ", parse_input(INPUT_FILE_PATH))
